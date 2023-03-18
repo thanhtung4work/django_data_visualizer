@@ -38,10 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
 #add
-=======
->>>>>>> a54b7a94a1f0b74208c7a4dbcf2b6e362c95a73e
     'reporting_website'
 ]
 
