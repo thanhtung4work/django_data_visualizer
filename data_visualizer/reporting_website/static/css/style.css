@@ -1,0 +1,229 @@
+body{
+    background-color: #f9f2f2 !important;
+}
+.my-container{
+    width: 100%;
+}
+/* guide */
+.my-container .guide{
+    width: 100%;
+    float: right;
+}
+.my-container .guide .border-circle{
+    width: 50px;
+    height: 50px;
+    border: 4px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    float: right;
+    margin: 20px 45px;
+    cursor: pointer;
+}
+.my-container .guide i{
+    margin: 0 auto;
+    font-size: 25px;
+}
+.my-container .guide .guide-content{
+    width: 250px;
+    height: 0px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    top: 95px;
+    right: 25px;
+    padding: 0 15px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    visibility: hidden;
+}
+.my-container .guide .border-circle:hover .guide-content{
+    visibility: unset;
+    transition: 0.5s;
+    height: 300px;
+}
+#triangle-up-1 {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #ffffff;
+    box-sizing: border-box;
+    float: right;
+    right: 22px;
+    top: -20px;
+    position: relative;
+    z-index: 10;
+
+}
+#triangle-up-2 {
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 24px solid rgba(3, 102, 214, 0.3);
+    box-sizing: border-box;
+    float: right;
+    right: -16px;
+    top: -25px;
+    position: relative;
+    z-index: 1;
+}
+.my-container .guide .guide-content p{
+    width: 100%;
+    margin-top: 30px;
+    text-align: justify;
+    text-overflow: clip;
+}
+/* form-submit */
+.my-container .form-submit{
+    width: 100%;
+    float: left;
+}
+.my-container .form-submit form{
+    width: 450px;
+    height: 300px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.my-container .form-submit form strong{
+    display: block;
+    padding-top: 60px;
+    font-size: 20px;
+    font-family:'Poppins', sans-serif; ;
+}
+.my-container .form-submit form .input-file{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.my-container .form-submit form label{
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #e82611;
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+.my-container .form-submit form label i{
+    font-size: 18px;
+    margin-right: 8px;
+}
+.my-container .form-submit form label:hover{
+    background-color: #b92919;
+}
+.my-container .form-submit form label:active{
+    transform: scale(0.9);
+}
+
+.my-container .form-submit form .btn-submit{
+    display: block;
+    border: none;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 15px 40px;
+    width: 180px;
+    margin: 30px auto;
+    cursor: pointer;
+    border: 2px solid #ff0000;
+    border-radius: 3px;
+}
+.my-container .form-submit form .btn-submit:hover{
+    background-color: #ffffff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+/* statistical menu*/
+.statistical-page{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.statistical-page .menu{
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
+    border-right: 1px solid #dddddd;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+.statistical-page .menu ul{
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+.statistical-page .menu ul li{
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #dddddd;
+    cursor: pointer;
+}
+.statistical-page .menu ul li:first-child{
+    border-top: 1px solid #dddddd;
+}
+.statistical-page .menu ul li a{
+    text-decoration: none;
+    padding-left: 8px;
+    padding: 20px 20px 20px 28px;
+    color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+.statistical-page .menu ul li:hover {
+    background-color: #e82611;
+}
+.statistical-page .menu ul li:hover a{
+    color: white;
+}
+.menu .logo-header{
+    text-align: center;
+    padding-top: 30px;
+}
+.menu .logo-header .logo{
+    width: 120px;
+}
+.menu .logo-header .name{
+    width: 210px;
+    margin: 10px 0 25px 0;
+}
+.active{
+    background-color: #e82611;
+}
+.active a{
+    color: white !important;
+}
+/* statistical content*/
+.statistical-page .statistical-content{
+    padding: 15px;
+    padding-left: 270px;
+}
+.statistical-page .statistical-content .div-graph{
+    padding: 5px;
+}
+.statistical-page .statistical-content .div-graph .graph{
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+}
