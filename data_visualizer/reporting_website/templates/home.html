@@ -16,12 +16,12 @@
         <div class="bubble5-arrow"></div>
     </div>
 </div>
-<div class="form-submit">
-    <form>
+<div class="form-submit" >
+    <form id="form-handle-file" method="post" onsubmit="return checkFile()">
         <strong id="file-name">Chưa có tệp nào được chọn</strong>
-        <input type="file" name="file-upload" id="file-upload" class="input-file" data-multiple-caption="{count} files selected" multiple/>
+        <input type="file" id="file-upload" class="input-file"/>
         <label for="file-upload"><i class="fa-solid fa-arrow-up-from-bracket"></i>Chọn tệp ...</label>
-        <button class="btn-submit">Thống kê êi</button>
+        <button class="btn-submit" id="btn-submit">Thống kê êi</button>
     </form>
 </div>
 

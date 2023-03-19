@@ -8,3 +8,9 @@ def home(request):
 
 def statistical(request):
     return render(request, 'statistical.html')
+
+def present(request):
+    return render(request, 'present.html')
+
+def exportpdf(request):
+    return render(request, 'exportPDF.html')

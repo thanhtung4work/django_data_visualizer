@@ -21,16 +21,39 @@
         <div class="my-container">
             <!-- start statistical -->
             <div class="row statistical-page">
-                <div class="menu col-xl-2">
+                <div class="menu col-xl-2 col-lg-2 " id="menu">
+                    <div class="handle-menu" id="handle-menu">
+                        <i class="fa-solid fa-arrow-right" id="arrow"></i>
+                    </div>
                     <div class="logo-header">
                         <img src="../static/images/logo.png" class="logo" alt=""/>
                         <img src="../static/images/web_name.png" class="name" alt=""/>
                     </div>
                     <ul class="main-menu">
-                        <li><a href="/">Chọn File</a></li>
-                        <li><a href="/statistical">Thống kê</a></li>
-                        <li><a href="/ab">Trình bày</a></li>
-                        <li><a href="/abc">Xuất PDF</a></li>
+                        <li>
+                            <a href="/">
+                                <i class="fa-solid fa-file"></i>
+                                <span>Chọn File</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/statistical">
+                                <i class="fa-solid fa-chart-column"></i>
+                                <span>Thống kê</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/present">
+                                <i class="fa-solid fa-pen"></i>
+                                <span>Trình bày</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/exportpdf">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <span>Xuất PDF</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="statistical-content col-xl-12">
@@ -42,7 +65,13 @@
                 </div>
             </div>
             <!-- end statistical -->
-
+            <div class="file-error" id="file-error">
+                <i class="fa-regular fa-face-smile"></i>
+                <strong id="title-error"></strong>
+                <strong id="abc">Thông báo sẽ đóng trong</strong>
+                <strong id="time"></strong>
+            </div>
         </div>
+        <div class="shadow" id="shadow"></div>
     </body>
 </html>

@@ -4,6 +4,55 @@ body{
 .my-container{
     width: 100%;
 }
+/* inform check file */
+.my-container .file-error{
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 20px;
+    display: none;
+    margin: -125px 0 0 -175px;
+}
+.my-container .file-error #title-error{
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+.my-container .file-error #abc{
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.my-container .file-error #time{
+    width: 100%;
+    display: block;
+    margin-top: 3px;
+    color: red;
+}
+.my-container .file-error i{
+    display: block;
+    font-size: 80px;
+    margin-top: 25px;
+}
+.shadow{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    display: none;
+}
 /* guide */
 .my-container .guide{
     width: 100%;
@@ -49,7 +98,7 @@ body{
     border-bottom: 30px solid #ffffff;
     box-sizing: border-box;
     float: right;
-    right: 22px;
+    right: 25px;
     top: -20px;
     position: relative;
     z-index: 10;
@@ -63,7 +112,7 @@ body{
     border-bottom: 24px solid rgba(3, 102, 214, 0.3);
     box-sizing: border-box;
     float: right;
-    right: -16px;
+    right: -13px;
     top: -25px;
     position: relative;
     z-index: 1;
@@ -90,7 +139,7 @@ body{
 }
 .my-container .form-submit form strong{
     display: block;
-    padding-top: 60px;
+    padding-top: 40px;
     font-size: 20px;
     font-family:'Poppins', sans-serif; ;
 }
@@ -132,12 +181,12 @@ body{
 .my-container .form-submit form .btn-submit{
     display: block;
     border: none;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     background-color: #ff0000;
     color: #ffffff;
-    padding: 15px 40px;
+    padding: 15px 0;
     width: 180px;
     margin: 30px auto;
     cursor: pointer;
@@ -154,6 +203,9 @@ body{
 .statistical-page{
     margin: 0 !important;
     padding: 0 !important;
+}
+.statistical-page .menu .handle-menu{
+    display: none;
 }
 .statistical-page .menu{
     background-color: #ffffff;
@@ -186,13 +238,17 @@ body{
     padding-left: 8px;
     padding: 20px 20px 20px 28px;
     color: #000000;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     display: block;
     width: 100%;
 }
+.statistical-page .menu ul li a i{
+    font-size: 18px;
+    margin-right: 10px;
+}
 .statistical-page .menu ul li:hover {
-    background-color: #e82611;
+    background-color: rgba(191, 7, 7, 1);
 }
 .statistical-page .menu ul li:hover a{
     color: white;
@@ -226,4 +282,148 @@ body{
     height: 400px;
     background-color: #fff;
     border-radius: 5px;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px){
+    .menu .logo-header .logo{
+        width: 100px;
+    }
+    .menu .logo-header .name{
+        width: 170px;
+        margin: 10px 0 25px 0;
+    }
+    .statistical-page .menu ul li a{
+        padding: 20px 20px 20px 22px;
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .menu .logo-header .logo{
+        margin-top: 20px;
+        width: 80px;
+    }
+    .menu .logo-header .name{
+        width: 140px;
+        margin: 10px 0 18px 0;
+    }
+    .statistical-page .menu ul li a{
+        padding: 20px 20px 20px 22px;
+        font-size: 15px;
+    }
+    .statistical-page .statistical-content{
+        padding: 15px;
+        padding-left: 210px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .statistical-page .menu{
+        overflow: hidden;
+        width: 70px;
+        transition: 0.5s;
+    }
+    .menu .logo-header{
+        padding-top: 10px;
+    }
+    .menu .logo-header .logo{
+        margin-top: 0px;
+        width: 50px;
+    }
+    .menu .logo-header .name{
+        display: none;
+    }
+    /* .statistical-page .menu ul li{
+        text-align: center;
+    } */
+    .statistical-page .menu ul li a{
+        padding: 20px 20px 20px 20px;
+        font-size: 15px;
+        position: relative;
+        display: table;
+        width: 300px;
+    }
+    .statistical-page .menu ul li a span{
+        position: relative;
+    }
+    .statistical-page .menu ul li a i{
+        font-size: 18px;
+        margin: 0 10px 0 7px;
+        position: relative;
+        width: 33px;
+    }
+    .statistical-page .statistical-content{
+        padding: 15px;
+        padding-left: 180px;
+    }
+    .statistical-page .menu .handle-menu{
+        display: block;
+        text-align: right;
+        padding: 15px;
+        border-bottom: 1px solid #dddddd;
+        cursor: pointer;
+        padding-right: 25px;
+    }
+    .statistical-page .dynamic-menu{
+        width: 200px !important;
+        transition: 0.5s;
+    }
+    .statistical-page .statistical-content{
+        padding: 15px;
+        padding-left: 85px;
+    }
+}
+@media only screen and (max-width:572px){
+    .statistical-page .statistical-content{
+        padding: 15px;
+        padding-left: 80px;
+    }
+    .my-container .form-submit form{
+        width: 280px;
+        height: 350px;
+        margin-top: 0;
+    }
+    .my-container .form-submit form strong{
+        font-size: 16px;
+    }
+    .my-container .form-submit form label{
+        font-size: 13px;
+    }
+    .my-container .form-submit form label i{
+        font-size: 15px;
+        margin-right: 8px;
+    }
+    .my-container .form-submit form .btn-submit{
+        font-size: 13px;
+        padding: 10px 0;
+        margin-top: 40px;
+    }
+    .my-container .guide .border-circle{
+        margin: 5px 10px 15px 0;
+    }
+    .my-container .guide .guide-content{
+        right: 10px;
+    }
+    #triangle-up-1 {
+        right: 5px;
+    }
+    #triangle-up-2 {
+        right: -33px;
+    }
+}
+
+/* chuc nang 2 trang sau */
+/* present */
+.my-container .present{
+    padding: 0 15px;
+}
+.my-container .present .present-content{
+    background-color: #ffffff;
+    text-align: center;
+}
+/* export pdf */
+.my-container .export-pdf{
+    padding: 0 15px;
+}
+.my-container .export-pdf .export-pdf-content{
+    background-color: #ffffff;
+    text-align: center;
 }
