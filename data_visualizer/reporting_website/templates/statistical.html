@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block main-content %}
-
- <div class="col-xl-6 div-graph">
-    <div class="graph"></div>
+<h1> {{ file_name }}</h1>
+<div class="col-xl-6 div-graph">
+    <div class="graph">{{ monthly_sales_graph|safe }}</div>
 </div>
 <div class="col-xl-6 div-graph">
     <div class="graph"></div>

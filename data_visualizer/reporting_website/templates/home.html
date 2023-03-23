@@ -17,9 +17,10 @@
     </div>
 </div>
 <div class="form-submit" >
-    <form id="form-handle-file" method="post" onsubmit="return checkFile()">
+    <form id="form-handle-file" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
         <strong id="file-name">Chưa có tệp nào được chọn</strong>
-        <input type="file" id="file-upload" class="input-file"/>
+        {{ form.file }}
         <label for="file-upload"><i class="fa-solid fa-arrow-up-from-bracket"></i>Chọn tệp ...</label>
         <button class="btn-submit" id="btn-submit">Thống kê êi</button>
     </form>
