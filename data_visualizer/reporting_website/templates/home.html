@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="form-submit" >
-    <form id="form-handle-file" method="post" enctype="multipart/form-data">
+    <form id="form-handle-file" method="post" enctype="multipart/form-data" onsubmit="return checkFile()">
         {% csrf_token %}
         <strong id="file-name">Chưa có tệp nào được chọn</strong>
         {{ form.file }}

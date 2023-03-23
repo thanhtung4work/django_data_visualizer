@@ -139,9 +139,10 @@ body{
 }
 .my-container .form-submit form strong{
     display: block;
-    padding-top: 40px;
+    padding-top: 30px;
     font-size: 20px;
-    font-family:'Poppins', sans-serif; ;
+    font-family:'Poppins', sans-serif;
+    word-wrap: break-word;
 }
 .my-container .form-submit form .input-file{
     width: 0.1px;
@@ -216,6 +217,7 @@ body{
     left: 0;
     bottom: 0;
     position: fixed;
+    width: 200px;
 }
 .statistical-page .menu ul{
     width: 100%;
@@ -261,7 +263,7 @@ body{
     width: 120px;
 }
 .menu .logo-header .name{
-    width: 210px;
+    width: 170px;
     margin: 10px 0 25px 0;
 }
 .active{
@@ -273,17 +275,21 @@ body{
 /* statistical content*/
 .statistical-page .statistical-content{
     padding: 15px;
-    padding-left: 270px;
+    padding-left: 220px;
 }
 .statistical-page .statistical-content .div-graph{
     padding: 5px;
+    margin: 0 auto;
 }
 .statistical-page .statistical-content .div-graph .graph{
-    height: 400px;
+    max-height: 600px;
     background-color: #fff;
     border-radius: 5px;
 }
-
+.statistical-page .statistical-content .div-graph .graph svg{
+    width: 100% !important;
+    height: 100% !important;
+}
 @media only screen and (min-width: 1200px) and (max-width: 1400px){
     .menu .logo-header .logo{
         width: 100px;

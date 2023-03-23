@@ -8,12 +8,15 @@ window.addEventListener('load', function() {
     });
     
     // change tag strong
-    document.querySelector("#file-upload").addEventListener('change',(event)=>{
-        const { files } = event.target;
-        console.log("files", files)
-        document.getElementById("file-name").innerHTML = files[0].name;
-    })
-
+    if(document.querySelector("#file-upload")){
+        document.querySelector("#file-upload").addEventListener('change',(event)=>{
+            const { files } = event.target;
+            console.log("files", files);
+            (files.length)?
+            document.getElementById("file-name").innerHTML = files[0].name:
+            document.getElementById("file-name").innerHTML = "Chưa có tệp nào được chọn"
+        })
+    }
     // handle menu
     document.getElementById("handle-menu").addEventListener('click',()=>{
         
@@ -28,6 +31,19 @@ window.addEventListener('load', function() {
         arrow.classList.replace('fa-arrow-left','fa-arrow-right')
 
     })
+
+    // file not selected
+    if(document.getElementById('btn-submit')){
+    document.getElementById('btn-submit').addEventListener('click',()=>{
+        if(document.getElementById('file-name').innerHTML === "Chưa có tệp nào được chọn"){
+            document.getElementById('title-error').innerHTML = "CHƯA CHỌN FILE KIA KÌA"
+            document.getElementById('shadow').style.display = "block";
+            document.getElementById('file-error').style.display = "block"
+            // setInterval(countdown, 1000);
+            timeclose()
+            setTimeout(closeInform, 3000)
+        }
+    })}
 
 })
 // check file
@@ -50,6 +66,7 @@ function timeclose(){
 function checkFile(){
     const check = " .txt .data .csv .xlsx";
     const fileUpload = document.getElementById('file-upload');
+    console.log("abc")
     if(!(fileUpload.files).length){
         document.getElementById('title-error').innerHTML = "CHƯA CHỌN FILE KIA KÌA"
         document.getElementById('shadow').style.display = "block";
@@ -57,19 +74,20 @@ function checkFile(){
         // setInterval(countdown, 1000);
         timeclose()
         setTimeout(closeInform, 3000)
+        return false
     }else{
         const arr = (fileUpload.files[0].name).split(".");
         console.log(check.includes(arr[arr.length - 1]))
         if(check.includes(arr[arr.length - 1])){
             console.log("true")
+            return true
         }else{
             document.getElementById('title-error').innerHTML = "CHỌN FILE ĐÚNG ĐỊNH DẠNG DÙM CÁI"
             document.getElementById('shadow').style.display = "block";
             document.getElementById('file-error').style.display = "block"
             timeclose()
             setTimeout(closeInform, 3000)
+            return false
         }
     }
-
-    return false
 }
