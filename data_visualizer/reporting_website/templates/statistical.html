@@ -2,18 +2,22 @@
 {% load static %}
 
 {% block main-content %}
-<h1> {{ file_name }}</h1>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
     <div class="graph">{{ monthly_sales_graph|safe }}</div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph"></div>
+    <div class="graph">{{ city_sales_graph|safe }}</div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph"></div>
+    <div class="graph">{{ product_sold_together_graph_2|safe }}</div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph"></div>
+    <div class="graph">{{ product_sales_percentage_graph|safe }}</div>
 </div>
-
+<div class="col-xl-10 col-12 col-sm-12 div-graph">
+    <div class="graph">{{quantity_total_sales_graph|safe }}</div>
+</div>
+<div class="col-xl-10 col-12 col-sm-12 div-graph">
+    <div class="graph">{{hourly_order_graph|safe }}</div>
+</div>
 {% endblock main-content %}
