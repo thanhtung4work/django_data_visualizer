@@ -51,7 +51,6 @@ def handle_uploaded_file(file_name):
   global df 
   df = pd.read_csv(f)
   clean_up()
-  print(df.head())
 
 def get_monthly_sales_graph(return_type='graph'):
   months = range(1, 13)
@@ -67,6 +66,7 @@ def get_monthly_sales_graph(return_type='graph'):
   plt.xticks(months, size=16)
   plt.xlabel('Tháng', size=16)
   plt.ylabel('Doanh thu', size=16)
+  plt.tight_layout()
   
   if return_type =='fig':
     return fig

@@ -4,6 +4,11 @@
 {% block main-content %}
 
 <div class="present col-12 col-sm-12">
+  <div class="present-btn-container">
+    <div class="present-btn" id="present-btn" onclick="onPresentPress()">
+      Quay lại trình bày
+    </div>
+  </div>
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -22,8 +27,9 @@
     </div>
 </div>
 
-<script>
-    document.getElementById("myModal").style.display = "block";
+<script defer>
+    var presentBtn = document.getElementById("present-btn");
+
     // Open the Modal
     function openModal() {
       document.getElementById("myModal").style.display = "block";
@@ -36,6 +42,12 @@
     
     var slideIndex = 1;
     showSlides(slideIndex);
+
+    function onPresentPress()  {
+      openModal()
+      console.log('ok')
+      showSlides(slideIndex);
+    }
     
     // Next/previous controls
     function plusSlides(n) {

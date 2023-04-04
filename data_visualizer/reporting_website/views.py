@@ -47,17 +47,15 @@ def statistical(request):
 
 def present(request):
     if request.session.has_key('file_name'):
-        file_name = request.session['file_name']
-        utils.handle_uploaded_file(file_name)
+        # file_name = request.session['file_name']
+        # utils.handle_uploaded_file(file_name)
         graphs = {
-            'monthly_sales_graph': utils.get_monthly_sales_graph(),
-            'city_sales_graph': utils.get_city_sales_graph(),
-            'monthly_sales_graph': utils.get_monthly_sales_graph(),
-            'city_sales_graph': utils.get_city_sales_graph(),
-            'product_sold_together_graph_2': utils.get_product_sold_together_graph_2(),
-            'product_sales_percentage_graph': utils.get_product_sales_percentage_graph(),
-            'quantity_total_sales_graph': utils.get_quantity_total_sales_graph(),
-            'hourly_order_graph': utils.get_hourly_order_graph(),
+            'monthly_sales_graph': 'a',#utils.get_monthly_sales_graph(),
+            # 'city_sales_graph': utils.get_city_sales_graph(),
+            # 'product_sold_together_graph_2': utils.get_product_sold_together_graph_2(),
+            # 'product_sales_percentage_graph': utils.get_product_sales_percentage_graph(),
+            # 'quantity_total_sales_graph': utils.get_quantity_total_sales_graph(),
+            # 'hourly_order_graph': utils.get_hourly_order_graph(),
         }
         context = {
             'graphs': graphs

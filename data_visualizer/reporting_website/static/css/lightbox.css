@@ -31,7 +31,6 @@
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
   margin: auto;
   padding: 0;
   width: 90%;
@@ -60,7 +59,10 @@
   display: none;
 }
 .mySlides > svg {
-  width: 100%;
+  display: block;
+  width: 90%;
+  max-height: 800px;
+  margin: auto;
 }
 
 /* Next & previous buttons */
@@ -126,4 +128,23 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.present-btn-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.present-btn {
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: #e82611;
+  color: #fff;
+  border-radius: 10px;
+}
+.present-btn:hover{
+  cursor: pointer;
 }
