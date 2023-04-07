@@ -12,14 +12,26 @@
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
-
-            {% for key, value in graphs.items %}
-            <div class="mySlides">
-                <div class="numbertext"> {{ forloop.counter }} </div>
-                {{ value|safe }}
+            <div class="mySlides" id="monthly-sales">
+              <div class="numbertext"> ? </div>
+              <div class="loader"></div>
             </div>
-            {% endfor %}
-        
+            <div class="mySlides" id="city-sales">
+              <div class="numbertext"> ? </div>
+              <div class="loader"></div>
+            </div>
+            <div class="mySlides" id="product_sales_percentage_graph">
+              <div class="numbertext"> ? </div>
+              <div class="loader"></div>
+            </div>
+            <div class="mySlides" id="product_sold_together_graph_2">
+              <div class="numbertext"> ? </div>
+              <div class="loader"></div>
+            </div>
+            <div class="mySlides" id="quantity_total_sales_graph">
+              <div class="numbertext"> ? </div>
+              <div class="loader"></div>
+            </div>
             <!-- Next/previous controls -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -27,6 +39,7 @@
     </div>
 </div>
 
+<script src="{% static 'js/api.js' %}"></script>
 <script defer>
     var presentBtn = document.getElementById("present-btn");
 
@@ -62,19 +75,13 @@
     function showSlides(n) {
       var i;
       var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
+
       if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
       slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
     }
 
     window.onkeypress = (e) => {

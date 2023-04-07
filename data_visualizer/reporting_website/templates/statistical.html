@@ -3,21 +3,36 @@
 
 {% block main-content %}
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph">{{ monthly_sales_graph|safe }}</div>
+    <div class="graph" id="monthly-sales">
+        <div class="loader"></div>
+    </div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph">{{ city_sales_graph|safe }}</div>
+    <div class="graph" id="city-sales">
+        <div class="loader"></div>
+    </div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph">{{ product_sold_together_graph_2|safe }}</div>
+    <div class="graph" id="product_sales_percentage_graph">
+        <div class="loader"></div>
+    </div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph">{{ product_sales_percentage_graph|safe }}</div>
+    <div class="graph" id="product_sold_together_graph_2">
+        <div class="loader"></div>
+    </div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph">{{quantity_total_sales_graph|safe }}</div>
+    <div class="graph" id="quantity_total_sales_graph">
+        <div class="loader"></div>
+    </div>
 </div>
 <div class="col-xl-10 col-12 col-sm-12 div-graph">
-    <div class="graph">{{hourly_order_graph|safe }}</div>
+    <div class="graph">
+        <div class="loader"></div>
+    </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'js/api.js' %}"></script>
 {% endblock main-content %}

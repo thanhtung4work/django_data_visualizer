@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main-content %}
+
+<div class="dummy-view">
+  <h1>Dummy</h1>
+  <div class="col-xl-10 col-12 col-sm-12 div-graph">
+    <div class="graph" id="city-sales"></div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(() => {
+    /*
+    $.get('/dummy_api', (data, status) => {
+      alert("Data: " + data)
+      $('#city-sales').append(data)
+    })
+    */
+    $.ajax({
+        type: 'GET',
+        url: '/dummy_api?graph=city_sales_graph',
+        dataType: "xml",
+        success: (svg) => {
+          $('#city-sales').html(svg.rootElement.outerHTML);
+        }
+    })
+  });
+</script>
+{% endblock main-content %}

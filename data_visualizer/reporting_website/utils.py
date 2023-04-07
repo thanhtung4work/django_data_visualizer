@@ -55,8 +55,6 @@ def handle_uploaded_file(file_name):
 def get_monthly_sales_graph(return_type='graph'):
   months = range(1, 13)
   sales_by_month = df.groupby('Month').sum()
-
-  response = HttpResponse(content_type="image/png")
   # create your image as usual, e.g. pylab.plot(...)
   
   fig = plt.figure(figsize=(16, 9))

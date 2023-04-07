@@ -7,5 +7,5 @@ urlpatterns = [
     path('statistical', views.statistical),
     path('present', views.present),
     path('exportpdf', views.exportpdf),
-    path('dummy_view', views.dummy_view),
+    path('dummy_api', views.dummy_api)
 ]
