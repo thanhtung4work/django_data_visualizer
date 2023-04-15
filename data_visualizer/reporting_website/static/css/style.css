@@ -291,6 +291,11 @@ body{
 }
 .statistical-page .statistical-content .div-graph .graph{
     background-color: #fff;
+    text-align: center;
+}
+.graph .css-loading{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .statistical-page .statistical-content .div-graph .graph svg{
     display: block;
