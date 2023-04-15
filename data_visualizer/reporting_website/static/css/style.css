@@ -68,6 +68,7 @@ body{
     float: right;
     margin: 20px 45px;
     cursor: pointer;
+    position: relative;
 }
 .my-container .guide i{
     margin: 0 auto;
@@ -79,17 +80,21 @@ body{
     background-color: #ffffff;
     border-radius: 10px;
     position: absolute;
-    top: 95px;
-    right: 25px;
+    top: 55px;
+    right: -45px;
     padding: 10px 15px 0px 15px;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     visibility: hidden;
+    overflow: hidden;
 }
 .my-container .guide .border-circle:hover .guide-content{
     visibility: unset;
     transition: 0.5s;
-    height: 480px;
-    overflow-y: scroll;
+    height: 350px;
+}
+.my-container .guide .border-circle:hover #triangle-up-1,
+.my-container .guide .border-circle:hover #triangle-up-2{
+    display: block;
 }
 #triangle-up-1 {
     width: 0;
@@ -99,23 +104,24 @@ body{
     border-bottom: 30px solid #ffffff;
     box-sizing: border-box;
     float: right;
-    right: 25px;
-    top: -20px;
-    position: relative;
-    z-index: 10;
-
+    right: 0px;
+    top: 35px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
 }
 #triangle-up-2 {
     width: 0;
     height: 0;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
     border-bottom: 24px solid rgba(3, 102, 214, 0.3);
     box-sizing: border-box;
     float: right;
-    right: -13px;
-    top: -25px;
-    position: relative;
+    right: 2px;
+    top: 32px;
+    position: absolute;
+    display: none;
     z-index: 1;
 }
 .my-container .guide .guide-content p{
@@ -195,10 +201,11 @@ body{
     border: 2px solid #ff0000;
     border-radius: 3px;
 }
-.my-container .form-submit form .btn-submit:hover{
-    background-color: #ffffff;
-    color: #ff0000;
+.my-container .form-submit form .btn-submit:hover,
+.my-container .form-submit form .btn-submit:focus{
+    outline-offset: 4px;
     border: 2px solid #ff0000;
+    outline: 3px solid #ff0000;
 }
 
 /* statistical menu*/
@@ -413,7 +420,7 @@ body{
     .my-container .guide .border-circle{
         margin: 5px 10px 15px 0;
     }
-    .my-container .guide .guide-content{
+    /* .my-container .guide .guide-content{
         right: 10px;
     }
     #triangle-up-1 {
@@ -421,7 +428,7 @@ body{
     }
     #triangle-up-2 {
         right: -33px;
-    }
+    } */
 }
 
 /* chuc nang 2 trang sau */
