@@ -293,7 +293,7 @@ body{
     background-color: #fff;
     text-align: center;
 }
-.graph .css-loading{
+.css-loading{
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -444,6 +444,14 @@ body{
 .my-container .present .present-content{
     background-color: #ffffff;
     text-align: center;
+}
+.btn-prev,.btn-next{
+    text-decoration: none;
+    color: white;
+}
+.btn-prev:hover,.btn-next:hover{
+    text-decoration: none;
+    color: white !important; 
 }
 /* export pdf */
 .my-container .export-pdf{
