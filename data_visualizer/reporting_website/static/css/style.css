@@ -6,6 +6,7 @@ body{
 }
 /* inform check file */
 .my-container .file-error{
+    
     width: 350px;
     height: 250px;
     background-color: #fff;
