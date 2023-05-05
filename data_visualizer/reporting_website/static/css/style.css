@@ -6,6 +6,7 @@ body{
 }
 /* inform check file */
 .my-container .file-error{
+    
     width: 350px;
     height: 250px;
     background-color: #fff;
@@ -68,6 +69,7 @@ body{
     float: right;
     margin: 20px 45px;
     cursor: pointer;
+    position: relative;
 }
 .my-container .guide i{
     margin: 0 auto;
@@ -79,17 +81,21 @@ body{
     background-color: #ffffff;
     border-radius: 10px;
     position: absolute;
-    top: 95px;
-    right: 25px;
+    top: 55px;
+    right: -45px;
     padding: 10px 15px 0px 15px;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     visibility: hidden;
+    overflow: hidden;
 }
 .my-container .guide .border-circle:hover .guide-content{
     visibility: unset;
     transition: 0.5s;
-    height: 480px;
-    overflow-y: scroll;
+    height: 350px;
+}
+.my-container .guide .border-circle:hover #triangle-up-1,
+.my-container .guide .border-circle:hover #triangle-up-2{
+    display: block;
 }
 #triangle-up-1 {
     width: 0;
@@ -99,23 +105,24 @@ body{
     border-bottom: 30px solid #ffffff;
     box-sizing: border-box;
     float: right;
-    right: 25px;
-    top: -20px;
-    position: relative;
-    z-index: 10;
-
+    right: 0px;
+    top: 35px;
+    display: none;
+    position: absolute;
+    z-index: 1000;
 }
 #triangle-up-2 {
     width: 0;
     height: 0;
-    border-left: 18px solid transparent;
-    border-right: 18px solid transparent;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
     border-bottom: 24px solid rgba(3, 102, 214, 0.3);
     box-sizing: border-box;
     float: right;
-    right: -13px;
-    top: -25px;
-    position: relative;
+    right: 2px;
+    top: 32px;
+    position: absolute;
+    display: none;
     z-index: 1;
 }
 .my-container .guide .guide-content p{
@@ -186,21 +193,99 @@ body{
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
-    background-color: #ff0000;
-    color: #ffffff;
-    padding: 15px 0;
-    width: 180px;
+    color: #e82611;
+    padding: 15px 15px;
     margin: 30px auto;
-    cursor: pointer;
-    border: 2px solid #ff0000;
-    border-radius: 3px;
+    transition: .5s;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
 }
-.my-container .form-submit form .btn-submit:hover{
-    background-color: #ffffff;
-    color: #ff0000;
-    border: 2px solid #ff0000;
+.form-submit form .btn-submit:hover{
+    background: #e82611;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #e82611,
+                0 0 25px #e82611,
+                0 0 50px #e82611,
+                0 0 100px #e82611;
 }
-
+.form-submit form .btn-submit span{
+    position: absolute;
+    display: block;
+}
+.form-submit form .btn-submit span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(90deg, transparent, #e82611) ;
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+.form-submit form .btn-submit span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #e82611);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+  
+@keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+}
+  
+.form-submit form .btn-submit span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #e82611);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+  
+@keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+}
+  
+.form-submit form .btn-submit span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #e82611);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+  
+@keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+}
 /* statistical menu*/
 .statistical-page{
     margin: 0 !important;
@@ -284,6 +369,11 @@ body{
 }
 .statistical-page .statistical-content .div-graph .graph{
     background-color: #fff;
+    text-align: center;
+}
+.css-loading{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .statistical-page .statistical-content .div-graph .graph svg{
     display: block;
@@ -413,7 +503,7 @@ body{
     .my-container .guide .border-circle{
         margin: 5px 10px 15px 0;
     }
-    .my-container .guide .guide-content{
+    /* .my-container .guide .guide-content{
         right: 10px;
     }
     #triangle-up-1 {
@@ -421,7 +511,7 @@ body{
     }
     #triangle-up-2 {
         right: -33px;
-    }
+    } */
 }
 
 /* chuc nang 2 trang sau */
@@ -432,6 +522,14 @@ body{
 .my-container .present .present-content{
     background-color: #ffffff;
     text-align: center;
+}
+.btn-prev,.btn-next{
+    text-decoration: none;
+    color: white;
+}
+.btn-prev:hover,.btn-next:hover{
+    text-decoration: none;
+    color: white !important; 
 }
 /* export pdf */
 .my-container .export-pdf{

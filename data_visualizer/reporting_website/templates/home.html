@@ -6,9 +6,9 @@
 <div class="guide">
     <div class="border-circle">
         <i class="fa-solid fa-question"></i>
+        <div id="triangle-up-1"></div>
+        <div id="triangle-up-2"></div>
         <div class="guide-content">
-            <div id="triangle-up-1"></div>
-            <div id="triangle-up-2"></div>
             <h5>Hướng dẫn sử dụng</h5>
             <ol>
                 <li>Tệp phải theo định dạng .csv</li>
@@ -31,7 +31,13 @@
         <strong id="file-name">Chưa có tệp nào được chọn</strong>
         {{ form.file }}
         <label for="file-upload"><i class="fa-solid fa-arrow-up-from-bracket"></i>Chọn tệp ...</label>
-        <button class="btn-submit" id="btn-submit">Thống kê êi</button>
+        <button class="btn-submit" id="btn-submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Thống kê êi
+        </button>
     </form>
 </div>
 

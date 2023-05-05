@@ -91,3 +91,48 @@ function checkFile(){
         }
     }
 }
+
+// present page
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+var slideIndex = 1;
+// showSlides(slideIndex);
+
+function onPresentPress()  {
+  openModal()
+  console.log('ok')
+  showSlides(slideIndex);
+}
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+  
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    console.log(slides)
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
+
+window.onkeydown = (e) => {
+    console.log(e)
+    if (e.keyCode === 39) plusSlides(1)
+    else if (e.keyCode === 37) plusSlides(-1)
+};
