@@ -6,7 +6,7 @@ body{
 }
 /* inform check file */
 .my-container .file-error{
-    
+
     width: 350px;
     height: 250px;
     background-color: #fff;
@@ -512,12 +512,25 @@ body{
     #triangle-up-2 {
         right: -33px;
     } */
+    .notif-modal i{
+        font-size: 30px;
+    }
+    .notif-modal .title{
+        font-size: 17px;
+    }
+    .notif-modal a{
+        font-size: 11px !important;
+    }
+    .notif-modal a i{
+        font-size: 15px !important;
+    }
 }
 
 /* chuc nang 2 trang sau */
 /* present */
 .my-container .present{
     padding: 0 15px;
+    overflow: hidden;
 }
 .my-container .present .present-content{
     background-color: #ffffff;
@@ -538,4 +551,58 @@ body{
 .my-container .export-pdf .export-pdf-content{
     background-color: #ffffff;
     text-align: center;
+}
+
+
+
+/* Safari syntax */
+:-webkit-full-screen {
+    background-color: transparent;
+}
+
+/* IE11 syntax */
+:-ms-fullscreen {
+    background-color: transparent;
+}
+
+/* Standard syntax */
+:fullscreen {
+    background-color: transparent;
+}
+.unimported-file{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notif-modal{
+    background-color: white;
+    width: 400px;
+    border-radius: 10px;
+    padding: 50px 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.notif-modal i{
+    font-size: 45px;
+}
+.notif-modal .title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.notif-modal a{
+    text-decoration: none;
+    color: white;
+    background-color: #e82611;
+    border: 2px solid #e82611;
+    padding: 10px 15px;
+    margin-top: 15px;
+    font-size: 14px !important;
+}
+.notif-modal a i{
+    font-size: 15px !important;
+}
+.notif-modal a:hover{
+    background-color: white;
+    color: #e82611;
 }

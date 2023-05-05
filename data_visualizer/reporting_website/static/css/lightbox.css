@@ -131,20 +131,23 @@ img.hover-shadow {
 }
 
 .present-btn-container{
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .present-btn {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   padding: 10px 20px;
   background-color: #e82611;
+  border:3px solid #e82611;
   color: #fff;
   border-radius: 10px;
 }
 .present-btn:hover{
   cursor: pointer;
+  color: #e82611;
+  background-color: #fff;
 }

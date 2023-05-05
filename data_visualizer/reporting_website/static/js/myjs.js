@@ -100,18 +100,32 @@ function openModal() {
 // Close the Modal
 function closeModal() {
     document.getElementById("myModal").style.display = "none";
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+    }
 }
 var slideIndex = 1;
 // showSlides(slideIndex);
-
+var elem = document.documentElement;
 function onPresentPress()  {
   openModal()
   console.log('ok')
   showSlides(slideIndex);
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
 }
 function plusSlides(n) {
     showSlides(slideIndex += n);
-  }
+}
   
   // Thumbnail image controls
 function currentSlide(n) {
@@ -136,3 +150,4 @@ window.onkeydown = (e) => {
     if (e.keyCode === 39) plusSlides(1)
     else if (e.keyCode === 37) plusSlides(-1)
 };
+

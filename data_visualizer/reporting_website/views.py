@@ -36,10 +36,15 @@ def statistical(request):
         # utils.handle_uploaded_file(file_name)
         
         return render(request, 'statistical.html')
-    return render(request, 'statistical.html')
+    return render(request, 'unimported_file.html')
 
 def present(request):
-    return render(request, 'present.html')
+    if request.session.has_key('file_name'):
+        # file_name = request.session['file_name']
+        # utils.handle_uploaded_file(file_name)
+        
+        return render(request, 'present.html')
+    return render(request, 'unimported_file.html')
 
 def exportpdf(request):
     if request.session.has_key('file_name'):
