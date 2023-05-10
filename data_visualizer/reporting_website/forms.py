@@ -12,4 +12,4 @@ class DocumentForm(forms.ModelForm):
         self.fields['file'].widget = FileInput(attrs={
                 'id': 'file-upload',
                 'class': 'input-file'
-            })
+        })
