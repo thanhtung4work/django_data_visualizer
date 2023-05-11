@@ -18,7 +18,7 @@ def home(request):
             request.session['file_name'] = file_obj.file.name
             
             file_name = request.session['file_name']
-            utils.handle_uploaded_file(file_name)
+            # utils.handle_uploaded_file(file_name)
             
             # return redirect(statistical)
             return redirect(statistical)
@@ -32,8 +32,8 @@ def home(request):
 
 def statistical(request):
     if request.session.has_key('file_name'):
-        # file_name = request.session['file_name']
-        # utils.handle_uploaded_file(file_name)
+        file_name = request.session['file_name']
+        utils.handle_uploaded_file(file_name)
         
         return render(request, 'statistical.html')
     return render(request, 'unimported_file.html')

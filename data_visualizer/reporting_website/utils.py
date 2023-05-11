@@ -39,6 +39,7 @@ def clean_up():
 
   # Total sales
   df['Total sales'] = df['Quantity Ordered'] * df['Price Each']
+  
   # City
   def get_city(address):
     return address.split(',')[1].strip()
@@ -140,7 +141,7 @@ def get_product_sold_together_graph_2(return_type='graph'):
   
   return data
 
-def get_product_sales_percentage_graph():
+def get_product_sales_percentage_graph(return_type='graph'):
   def my_level_list(label, data, sum):
     list = []
     for i in range(len(data)):
@@ -173,6 +174,9 @@ def get_product_sales_percentage_graph():
   plt.pie(total_sales_product, labels=my_level_list(products, total_sales_product, overall_sales), autopct=my_autopct, explode=my_explode(products, total_sales_product, overall_sales))
   plt.title('Phần trăm tổng doanh thu của các sản phẩm', size=32)
   
+  if return_type =='fig':
+    return fig
+  
   graph = StringIO()
   fig.savefig(graph, format='svg')
   graph.seek(0)
@@ -180,7 +184,7 @@ def get_product_sales_percentage_graph():
   
   return data
 
-def get_quantity_total_sales_graph():
+def get_quantity_total_sales_graph(return_type="graph"):
   product_data = df.groupby('Product')
   quantity_order = product_data.sum()['Quantity Ordered']
   total_sales_product = product_data.sum()['Total sales']
@@ -199,6 +203,9 @@ def get_quantity_total_sales_graph():
 
   plt.title('Số lượng đã bán và doanh thu từ sản phẩm', size=32)
   plt.tight_layout()
+  
+  if return_type =='fig':
+    return fig
   
   graph = StringIO()
   fig.savefig(graph, format='svg')
@@ -237,6 +244,8 @@ def get_report_file():
   pdf.savefig(get_monthly_sales_graph(return_type='fig'))
   pdf.savefig(get_city_sales_graph(return_type='fig'))
   pdf.savefig(get_product_sold_together_graph_2(return_type='fig'))
+  pdf.savefig(get_product_sales_percentage_graph(return_type='fig'))
+  pdf.savefig(get_quantity_total_sales_graph(return_type='fig'))
 
   pdf.close()
   return file_name
